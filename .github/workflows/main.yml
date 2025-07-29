@@ -9,6 +9,8 @@ jobs:
   deploy-to-github-pages:
     # use ubuntu-latest image to run steps on
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push to gh-pages branch
     steps:
       # uses GitHub's checkout action to checkout code from the main branch
       - uses: actions/checkout@v4
